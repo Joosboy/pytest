@@ -55,7 +55,8 @@ Plugin discovery order at tool startup
      current dir
    - for each test path, load ``conftest.py`` and ``test*/conftest.py`` relative
      to the directory part of the test path, if exist. Before a ``conftest.py``
-     file is loaded, load ``conftest.py`` files in all of its parent directories.
+     file is loaded, load ``conftest.py`` files in all of its parent directories
+     up to the :option:`--confcutdir` (which defaults to the :ref:`rootdir <rootdir>`).
      After a ``conftest.py`` file is loaded, recursively load all plugins specified
      in its :globalvar:`pytest_plugins` variable if present.
 
